@@ -1,1 +1,7 @@
+This is the code for the Tetrad project. This version incorporates intance-specific GFci (IGFci) algorithm:
+[Jabbari, F., & Cooper, G. F. (2020)] An instance-specific algorithm for learning the structure of causal Bayesian networks containing latent variables. In Proceedings of the 2020 SIAM International Conference on Data Mining (pp. 433-441). 
+Society for Industrial and Applied Mathematics.
+[Jabbari, F. (2021)] Instance-Specific Causal Bayesian Network Structure Learning (Doctoral dissertation, University of Pittsburgh).
 
+The IGFci algorithm is implemented in the following package: edu.cmu.tetrad.search
+"TestIGFCI_TrainTest.java" is a sample code that runs IGFci given tabular (csv format) training and test datasets. This code learns a single population-wide model using the training set. It also learns an instance-specific model for each test sample T given T and the training set. Finally, it outputs the average structural differences between the population-wide and the instance-specific models.
