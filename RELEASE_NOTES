@@ -1,0 +1,45 @@
+6.7.0
+Can override variable datatypes using metafile
+Functions for handling experimental variables
+Updated default parameters based on empirical simulation
+Extended parameter descriptions (rollovers)
+Updated manual
+Experimental algorithms are now only available in experimental mode i.e., --experimental
+Model scores (e.g., BIC) are output where available
+New look for workflow arrows
+Bootstrapping now includes original dataset by default
+Revised production algorithm list
+Improved covariance calculation speed and precision
+Many bug fixes
+
+6.6.0
+Changed edge coloration behavior and docs to match original specification
+Added sortable table view of edges in graph
+Generalized bootstrapping to sampling with flexible options
+Layout fixes in UI
+Added .dot output for graphs
+Added KCI
+Added MultiFASK
+Updated CCI algorithm
+
+6.5.0
+Added html manual
+Tetrad now uses online html manual for algorithm descritpions
+Tetradcmd removed
+Fixed slow loading and initialization of knowledge box
+Fixed PCall loading knowledge
+Fixed data reader missing value bugs
+Fixed simulation data disappearing
+Fixed general contract warnings
+
+6.5.1
+Fixed simulation data disappearing bug
+Fixed knowledge box variable dragging bug
+
+6.5.2
+Fixed simulation from IM box bug
+
+6.5.3
+Fix NPE error for true graph in tabular comparison
+Fix simulation type selection from IM
+

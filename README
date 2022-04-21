@@ -1,0 +1,59 @@
+This is the code for the Tetrad project. Please, if you
+are a user of Tetrad, or even a novice, if you are 
+willing, would you please consider giving us feedback
+on what you like about it or don't like about it? It
+would be most appreciated. Just open up an issue (click
+on the Issues tab, above).
+
+An introduction to Tetrad can be found here:
+
+http://www.phil.cmu.edu/tetrad
+
+A tutorial can be found here:
+
+https://rawgit.com/cmu-phil/tetrad/development/tetrad-gui/src/main/resources/resources/javahelp/manual/tetrad_tutorial.html
+
+The manual is here:
+
+http://cmu-phil.github.io/tetrad/manual/
+
+Javadocs can be found by running the javadocs command on the project once checked out.
+
+Downloads directory is here:
+
+https://cloud.ccd.pitt.edu/nexus/content/repositories/releases/edu/cmu/tetrad-gui/
+
+The wiki is here:
+
+https://github.com/cmu-phil/tetrad/wiki
+
+The issue tracker is here:
+
+https://github.com/cmu-phil/tetrad/issues
+
+For instructions on how to set this project up in 
+IntelliJ IDEA, see the Wiki. Alternatively, you can 
+run the lifecycle package target and launch the ejar 
+that is  built in the target directory, using the call
+
+java -jar *-launch.jar
+
+The project contains fairly well-developed code in these 
+packages:
+
+tetrad
+pitt
+tetradapp (now succeeded by Causal Command - https://github.com/bd2kccd/causal-cmd)
+
+The  tetrad-lib package contains the "model" code; the 
+tetrad-gui package contains the "view" (GUI) code.
+
+We have a (small) team working (part-time) on this code,
+but if you have contributions to me, please feel free.
+If you have suggestions or bug reports, please subit 
+those to the github issue tracker. If you have code
+contributions, these will be handled via the
+issue tracker and the GitHub pull-request procedure. As 
+usual, please fork the repository if you'd like to work on 
+it; contributions will be handled through the usual
+github review method by pull request.

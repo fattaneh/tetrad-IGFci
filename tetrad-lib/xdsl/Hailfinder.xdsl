@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="V1" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="N0_7muVerMo">
+			<state id="StrongUp" label="F5" />
+			<state id="WeakUp" label="F6" />
+			<state id="Neutral" label="F7" />
+			<state id="Down" label="F8" />
+			<probabilities>0.25 0.25 0.25 0.25</probabilities>
+		</cpt>
+		<cpt id="SubjVertMo">
+			<state id="StronUp" label="F9" />
+			<state id="WeakUp" label="F10" />
+			<state id="Neutral" label="F11" />
+			<state id="Down" label="F12" />
+			<probabilities>0.15 0.15 0.5 0.2</probabilities>
+		</cpt>
+		<cpt id="QGVertMotion">
+			<state id="StrongUp" label="F13" />
+			<state id="WeakUp" label="F14" />
+			<state id="Neutral" label="F15" />
+			<state id="Down" label="F16" />
+			<probabilities>0.15 0.15 0.5 0.2</probabilities>
+		</cpt>
+		<cpt id="CombVerMo">
+			<state id="StrongUp" label="F17" />
+			<state id="WeakUp" label="F18" />
+			<state id="Neutral" label="F19" />
+			<state id="Down" label="F20" />
+			<parents>N0_7muVerMo SubjVertMo QGVertMotion</parents>
+			<probabilities>1 0 0 0 0.9 0.1 0 0 0.7 0.2 0.1 0 0.2 0.5 0.2 0.1 0.9 0.1 0 0 0.7 0.3 0 0 0.15 0.7 0.15 0 0.1 0.35 0.45 0.1 0.7 0.2 0.1 0 0.15 0.7 0.15 0 0.2 0.6 0.2 0 0.1 0.2 0.6 0.1 0.2 0.5 0.2 0.1 0.1 0.35 0.45 0.1 0.1 0.2 0.6 0.1 0.1 0.1 0.2 0.6 0.9 0.1 0 0 0.7 0.3 0 0 0.15 0.7 0.15 0 0.1 0.35 0.45 0.1 0.7 0.3 0 0 0 1 0 0 0 0.7 0.3 0 0 0.2 0.7 0.1 0.15 0.7 0.15 0 0 0.7 0.3 0 0 0.3 0.7 0 0 0.15 0.5 0.35 0.1 0.35 0.45 0.1 0 0.2 0.7 0.1 0 0.15 0.5 0.35 0 0.1 0.2 0.7 0.7 0.2 0.1 0 0.15 0.7 0.15 0 0.2 0.6 0.2 0 0.1 0.2 0.6 0.1 0.15 0.7 0.15 0 0 0.7 0.3 0 0 0.3 0.7 0 0 0.15 0.5 0.35 0.2 0.6 0.2 0 0 0.3 0.7 0 0 0 1 0 0 0 0.7 0.3 0.1 0.2 0.6 0.1 0 0.15 0.5 0.35 0 0 0.7 0.3 0 0 0.3 0.7 0.2 0.5 0.2 0.1 0.1 0.35 0.45 0.1 0.1 0.2 0.6 0.1 0.1 0.1 0.2 0.6 0.1 0.35 0.45 0.1 0 0.2 0.7 0.1 0 0.15 0.5 0.35 0 0.1 0.2 0.7 0.1 0.2 0.6 0.1 0 0.15 0.5 0.35 0 0 0.7 0.3 0 0 0.3 0.7 0.1 0.1 0.2 0.6 0 0.1 0.2 0.7 0 0 0.3 0.7 0 0 0 1</probabilities>
+		</cpt>
+		<cpt id="AreaMeso_ALS">
+			<state id="StrongUp" label="F21" />
+			<state id="WeakUp" label="F22" />
+			<state id="Neutral" label="F23" />
+			<state id="Down" label="F24" />
+			<parents>CombVerMo</parents>
+			<probabilities>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</probabilities>
+		</cpt>
+		<cpt id="SatContMoist">
+			<state id="VeryWet" label="F25" />
+			<state id="Wet" label="F26" />
+			<state id="Neutral" label="F27" />
+			<state id="Dry" label="F28" />
+			<probabilities>0.15 0.2 0.4 0.25</probabilities>
+		</cpt>
+		<cpt id="RaoContMoist">
+			<state id="VeryWet" label="F29" />
+			<state id="Wet" label="F30" />
+			<state id="Neutral" label="F31" />
+			<state id="Dry" label="F32" />
+			<probabilities>0.15 0.2 0.4 0.25</probabilities>
+		</cpt>
+		<cpt id="CombMoisture">
+			<state id="VeryWet" label="F33" />
+			<state id="Wet" label="F34" />
+			<state id="Neutral" label="F35" />
+			<state id="Dry" label="F36" />
+			<parents>SatContMoist RaoContMoist</parents>
+			<probabilities>0.9 0.1 0 0 0.6 0.35 0.05 0 0.3 0.5 0.2 0 0.25 0.35 0.25 0.15 0.55 0.4 0.05 0 0.15 0.6 0.2 0.05 0.05 0.4 0.45 0.1 0.1 0.3 0.3 0.3 0.25 0.3 0.35 0.1 0.1 0.35 0.5 0.05 0 0.15 0.7 0.15 0 0.1 0.4 0.5 0.25 0.25 0.25 0.25 0.25 0.25 0.25 0.25 0.25 0.25 0.25 0.25 0.25 0.25 0.25 0.25</probabilities>
+		</cpt>
+		<cpt id="AreaMoDryAir">
+			<state id="VeryWet" label="F37" />
+			<state id="Wet" label="F38" />
+			<state id="Neutral" label="F39" />
+			<state id="Dry" label="F40" />
+			<parents>AreaMeso_ALS CombMoisture</parents>
+			<probabilities>0.99 0.01 0 0 0.7 0.29 0.01 0 0.2 0.55 0.24 0.01 0 0.25 0.55 0.2 0.8 0.2 0 0 0.35 0.55 0.1 0 0.01 0.39 0.55 0.05 0 0.02 0.43 0.55 0.7 0.29 0.01 0 0.2 0.6 0.2 0 0.01 0.09 0.8 0.1 0 0 0.3 0.7 0.2 0.74 0.06 0 0.05 0.4 0.45 0.1 0 0.05 0.5 0.45 0 0 0.01 0.99</probabilities>
+		</cpt>
+		<cpt id="VISCloudCov">
+			<state id="Cloudy" label="F41" />
+			<state id="PC" label="F42" />
+			<state id="Clear" label="F43" />
+			<probabilities>0.1 0.5 0.4</probabilities>
+		</cpt>
+		<cpt id="IRCloudCover">
+			<state id="Cloudy" label="F44" />
+			<state id="PC" label="F45" />
+			<state id="Clear" label="F46" />
+			<probabilities>0.15 0.45 0.4</probabilities>
+		</cpt>
+		<cpt id="CombClouds">
+			<state id="Cloudy" label="F47" />
+			<state id="PC" label="F48" />
+			<state id="Clear" label="F49" />
+			<parents>VISCloudCov IRCloudCover</parents>
+			<probabilities>0.95 0.04 0.01 0.85 0.13 0.02 0.8 0.1 0.1 0.45 0.52 0.03 0.1 0.8 0.1 0.05 0.45 0.5 0.1 0.4 0.5 0.02 0.28 0.7 0 0.02 0.98</probabilities>
+		</cpt>
+		<cpt id="CldShadeOth">
+			<state id="Cloudy" label="F50" />
+			<state id="PC" label="F51" />
+			<state id="Clear" label="F52" />
+			<parents>AreaMoDryAir AreaMeso_ALS CombClouds</parents>
+			<probabilities>1 0 0 0.85 0.15 0 0.25 0.35 0.4 0.95 0.05 0 0.4 0.55 0.05 0.05 0.45 0.5 0.9300000000000001 0.07000000000000001 0 0.2 0.78 0.02 0.01 0.29 0.7 0.74 0.25 0.01 0 0.5 0.5 0 0.1 0.9 0.92 0.08 0 0.7 0.29 0.01 0.15 0.4 0.45 0.9 0.09 0.01 0.25 0.6 0.15 0.01 0.3 0.69 0.8 0.2 0 0.01 0.89 0.1 0 0.1 0.9 0.65 0.34 0.01 0 0.4 0.6 0 0.02 0.98 0.88 0.12 0 0.4 0.5 0.1 0.1 0.4 0.5 0.85 0.15 0 0.15 0.75 0.1 0 0.2 0.8 0.8 0.18 0.02 0.03 0.85 0.12 0 0.05 0.95 0.5 0.48 0.02 0.01 0.74 0.25 0 0.01 0.99 0.85 0.14 0.01 0.55 0.43 0.02 0.1 0.25 0.65 0.6 0.39 0.01 0.01 0.9 0.09 0 0.15 0.85 0.78 0.2 0.02 0.01 0.74 0.25 0 0.04 0.96 0.42 0.55 0.03 0.05 0.65 0.3 0 0 1</probabilities>
+		</cpt>
+		<cpt id="AMInstabMt">
+			<state id="None" label="F53" />
+			<state id="Weak" label="F54" />
+			<state id="Strong" label="F55" />
+			<probabilities>0.333333 0.333333 0.333334</probabilities>
+		</cpt>
+		<cpt id="InsInMt">
+			<state id="None" label="F56" />
+			<state id="Weak" label="F57" />
+			<state id="Strong" label="F58" />
+			<parents>CldShadeOth AMInstabMt</parents>
+			<probabilities>0.9 0.1 0 0.01 0.4 0.59 0 0.05 0.95 0.6 0.39 0.01 0 0.4 0.6 0 0 1 0.5 0.35 0.15 0 0.15 0.85 0 0 1</probabilities>
+		</cpt>
+		<cpt id="WndHodograph">
+			<state id="DCVZFavor" label="F59" />
+			<state id="StrongWest" label="F60" />
+			<state id="Westerly" label="F61" />
+			<state id="Other" label="F62" />
+			<probabilities>0.3 0.25 0.25 0.2</probabilities>
+		</cpt>
+		<cpt id="OutflowFrMt">
+			<state id="None" label="F63" />
+			<state id="Weak" label="F64" />
+			<state id="Strong" label="F65" />
+			<parents>InsInMt WndHodograph</parents>
+			<probabilities>1 0 0 1 0 0 1 0 0 1 0 0 0.5 0.4 0.1 0.15 0.4 0.45 0.35 0.6 0.05 0.8 0.19 0.01 0.05 0.45 0.5 0.01 0.15 0.84 0.1 0.25 0.65 0.6 0.3 0.1</probabilities>
+		</cpt>
+		<cpt id="MorningBound">
+			<state id="None" label="F66" />
+			<state id="Weak" label="F67" />
+			<state id="Strong" label="F68" />
+			<probabilities>0.5 0.35 0.15</probabilities>
+		</cpt>
+		<cpt id="Boundaries">
+			<state id="None" label="F69" />
+			<state id="Weak" label="F70" />
+			<state id="Strong" label="F71" />
+			<parents>OutflowFrMt WndHodograph MorningBound</parents>
+			<probabilities>0.5 0.48 0.02 0.3 0.5 0.2 0.1 0.25 0.65 0.75 0.22 0.03 0.45 0.45 0.1 0.25 0.4 0.35 0.8 0.18 0.02 0.35 0.5 0.15 0.25 0.35 0.4 0.7 0.28 0.02 0.25 0.6 0.15 0.05 0.35 0.6 0.3 0.63 0.07000000000000001 0.1 0.5 0.4 0.05 0.2 0.75 0.15 0.7 0.15 0.1 0.75 0.15 0.05 0.5 0.45 0.15 0.7 0.15 0.05 0.8 0.15 0.05 0.45 0.5 0.4 0.55 0.05 0.2 0.65 0.15 0.05 0.3 0.65 0 0.55 0.45 0 0.4 0.6 0 0.15 0.85 0 0.5 0.5 0 0.4 0.6 0 0.2 0.8 0 0.7 0.3 0 0.5 0.5 0 0.2 0.8 0.02 0.73 0.25 0.01 0.5 0.49 0.01 0.2 0.79</probabilities>
+		</cpt>
+		<cpt id="CldShadeConv">
+			<state id="None" label="F72" />
+			<state id="Some" label="F73" />
+			<state id="Marked" label="F74" />
+			<parents>InsInMt WndHodograph</parents>
+			<probabilities>1 0 0 1 0 0 1 0 0 1 0 0 0.3 0.6 0.1 0.2 0.7 0.1 0.5 0.46 0.04 0.8 0.19 0.01 0 0.3 0.7 0 0.2 0.8 0.1 0.5 0.4 0.5 0.38 0.12</probabilities>
+		</cpt>
+		<cpt id="CompPlFcst">
+			<state id="IncCapDecIns" label="F75" />
+			<state id="LittleChange" label="F76" />
+			<state id="DecCapIncIns" label="F77" />
+			<parents>Boundaries CldShadeConv AreaMeso_ALS CldShadeOth</parents>
+			<probabilities>0.4 0.35 0.25 0.1 0.35 0.55 0.05 0.3 0.65 0.6 0.25 0.15 0.4 0.3 0.3 0.2 0.5 0.3 0.6 0.35 0.05 0.45 0.4 0.15 0.25 0.45 0.3 0.7 0.27 0.03 0.65 0.3 0.05 0.6 0.35 0.05 0.4 0.35 0.25 0.25 0.3 0.45 0.15 0.35 0.5 0.65 0.25 0.1 0.45 0.3 0.25 0.25 0.5 0.25 0.65 0.3 0.05 0.5 0.4 0.1 0.3 0.45 0.25 0.75 0.23 0.02 0.7 0.26 0.04 0.65 0.32 0.03 0.45 0.3 0.25 0.4 0.3 0.3 0.35 0.3 0.35 0.7 0.22 0.08 0.55 0.3 0.15 0.4 0.45 0.15 0.7 0.27 0.03 0.6 0.3 0.1 0.55 0.33 0.12 0.85 0.14 0.01 0.8 0.17 0.03 0.75 0.23 0.02 0.35 0.35 0.3 0.05 0.35 0.6 0.03 0.25 0.72 0.5 0.25 0.25 0.3 0.35 0.35 0.15 0.45 0.4 0.55 0.3 0.15 0.4 0.4 0.2 0.2 0.4 0.4 0.6 0.35 0.05 0.6 0.3 0.1 0.55 0.33 0.12 0.35 0.35 0.3 0.1 0.35 0.55 0.05 0.3 0.65 0.55 0.25 0.2 0.35 0.35 0.3 0.2 0.5 0.3 0.6 0.3 0.1 0.45 0.4 0.15 0.25 0.5 0.25 0.65 0.3 0.05 0.65 0.3 0.05 0.6 0.35 0.05 0.4 0.35 0.25 0.25 0.4 0.35 0.2 0.4 0.4 0.65 0.25 0.1 0.45 0.35 0.2 0.3 0.5 0.2 0.65 0.3 0.05 0.55 0.3 0.15 0.5 0.3 0.2 0.78 0.18 0.04 0.75 0.2 0.05 0.7 0.25 0.05 0.3 0.3 0.4 0.01 0.25 0.74 0.01 0.2 0.79 0.35 0.25 0.4 0.15 0.4 0.45 0.1 0.35 0.55 0.45 0.3 0.25 0.3 0.4 0.3 0.15 0.4 0.45 0.5 0.35 0.15 0.48 0.32 0.2 0.45 0.35 0.2 0.3 0.3 0.4 0.05 0.6 0.35 0.04 0.27 0.69 0.4 0.25 0.35 0.2 0.4 0.4 0.12 0.43 0.45 0.5 0.3 0.2 0.35 0.4 0.25 0.2 0.45 0.35 0.55 0.35 0.1 0.55 0.3 0.15 0.5 0.4 0.1 0.3 0.35 0.35 0.15 0.35 0.5 0.13 0.35 0.52 0.5 0.25 0.25 0.35 0.35 0.3 0.2 0.45 0.35 0.55 0.35 0.1 0.45 0.35 0.2 0.4 0.35 0.25 0.7 0.24 0.06 0.65 0.28 0.07000000000000001 0.6 0.3 0.1</probabilities>
+		</cpt>
+		<cpt id="CapChange">
+			<state id="Decreasing" label="F78" />
+			<state id="LittleChange" label="F79" />
+			<state id="Increasing" label="F80" />
+			<parents>CompPlFcst</parents>
+			<probabilities>0 0 1 0 1 0 1 0 0</probabilities>
+		</cpt>
+		<cpt id="LoLevMoistAd">
+			<state id="StrongPos" label="F81" />
+			<state id="WeakPos" label="F82" />
+			<state id="Neutral" label="F83" />
+			<state id="Negative" label="F84" />
+			<probabilities>0.12 0.28 0.3 0.3</probabilities>
+		</cpt>
+		<cpt id="InsChange">
+			<state id="Decreasing" label="F85" />
+			<state id="LittleChange" label="F86" />
+			<state id="Increasing" label="F87" />
+			<parents>LoLevMoistAd CompPlFcst</parents>
+			<probabilities>0 0.05 0.95 0 0.12 0.88 0.05 0.15 0.8 0.05 0.15 0.8 0.1 0.4 0.5 0.25 0.5 0.25 0.15 0.5 0.35 0.2 0.6 0.2 0.35 0.5 0.15 0.5 0.4 0.1 0.8 0.16 0.04 0.9 0.09 0.01</probabilities>
+		</cpt>
+		<cpt id="MountainFcst">
+			<state id="NIL" label="F88" />
+			<state id="SIG" label="F89" />
+			<state id="SVR" label="F90" />
+			<parents>InsInMt</parents>
+			<probabilities>1 0 0 0.48 0.5 0.02 0.2 0.5 0.3</probabilities>
+		</cpt>
+		<cpt id="Date">
+			<state id="May15_Jun14" label="F93" />
+			<state id="Jun15_Jul1" label="F94" />
+			<state id="Jul2_Jul15" label="F95" />
+			<state id="Jul16_Aug10" label="F96" />
+			<state id="Aug11_Aug20" label="F97" />
+			<state id="Aug20_Sep15" label="F98" />
+			<probabilities>0.254098 0.131148 0.106557 0.213115 0.07377 0.221312</probabilities>
+		</cpt>
+		<cpt id="Scenario">
+			<state id="A" label="F104" />
+			<state id="B" label="F105" />
+			<state id="C" label="F106" />
+			<state id="D" label="F107" />
+			<state id="E" label="F108" />
+			<state id="F" label="F109" />
+			<state id="G" label="F110" />
+			<state id="H" label="F111" />
+			<state id="I" label="F112" />
+			<state id="J" label="F113" />
+			<state id="K" label="F114" />
+			<parents>Date</parents>
+			<probabilities>0.1 0.16 0.1 0.08 0.08 0.01 0.08 0.1 0.09 0.03 0.17 0.05 0.16 0.09 0.09 0.12 0.02 0.13 0.06 0.07000000000000001 0.11 0.1 0.04 0.13 0.1 0.08 0.15 0.03 0.14 0.04 0.06 0.15 0.08 0.04 0.13 0.09 0.07000000000000001 0.2 0.08 0.06 0.05 0.07000000000000001 0.13 0.08 0.04 0.11 0.1 0.07000000000000001 0.17 0.05 0.1 0.05 0.07000000000000001 0.14 0.1 0.05 0.11 0.1 0.08 0.11 0.02 0.11 0.06 0.08 0.11 0.17</probabilities>
+		</cpt>
+		<cpt id="ScenRelAMCIN">
+			<state id="AB" label="F115" />
+			<state id="CThruK" label="F116" />
+			<parents>Scenario</parents>
+			<probabilities>1 0 1 0 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1</probabilities>
+		</cpt>
+		<cpt id="MorningCIN">
+			<state id="None" label="F117" />
+			<state id="PartInhibit" label="F118" />
+			<state id="Stifling" label="F119" />
+			<state id="TotalInhibit" label="F120" />
+			<probabilities>0.15 0.57 0.2 0.08</probabilities>
+		</cpt>
+		<cpt id="AMCINInScen">
+			<state id="LessThanAve" label="F121" />
+			<state id="Average" label="F122" />
+			<state id="MoreThanAve" label="F123" />
+			<parents>ScenRelAMCIN MorningCIN</parents>
+			<probabilities>1 0 0 0.6 0.37 0.03 0.25 0.45 0.3 0 0.1 0.9 0.75 0.25 0 0.3 0.6 0.1 0.01 0.4 0.59 0 0.03 0.97</probabilities>
+		</cpt>
+		<cpt id="CapInScen">
+			<state id="LessThanAve" label="F124" />
+			<state id="Average" label="F125" />
+			<state id="MoreThanAve" label="F126" />
+			<parents>AMCINInScen CapChange</parents>
+			<probabilities>1 0 0 0.98 0.02 0 0.35 0.35 0.3 0.75 0.25 0 0.03 0.94 0.03 0 0.25 0.75 0.3 0.35 0.35 0 0.02 0.98 0 0 1</probabilities>
+		</cpt>
+		<cpt id="ScenRelAMIns">
+			<state id="ABI" label="F127" />
+			<state id="CDEJ" label="F128" />
+			<state id="F" label="F129" />
+			<state id="G" label="F130" />
+			<state id="H" label="F131" />
+			<state id="K" label="F132" />
+			<parents>Scenario</parents>
+			<probabilities>1 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1</probabilities>
+		</cpt>
+		<cpt id="LIfr12ZDENSd">
+			<state id="LIGt0" label="F133" />
+			<state id="N1GtLIGt_4" label="F134" />
+			<state id="N5GtLIGt_8" label="F135" />
+			<state id="LILt_8" label="F136" />
+			<probabilities>0.1 0.52 0.3 0.08</probabilities>
+		</cpt>
+		<cpt id="AMDewptCalPl">
+			<state id="Instability" label="F137" />
+			<state id="Neutral" label="F138" />
+			<state id="Stability" label="F139" />
+			<probabilities>0.3 0.25 0.45</probabilities>
+		</cpt>
+		<cpt id="AMInsWliScen">
+			<state id="LessUnstable" label="F140" />
+			<state id="Average" label="F141" />
+			<state id="MoreUnstable" label="F142" />
+			<parents>ScenRelAMIns LIfr12ZDENSd AMDewptCalPl</parents>
+			<probabilities>0.6 0.3 0.1 0.85 0.13 0.02 0.95 0.04 0.01 0.3 0.3 0.4 0.5 0.3 0.2 0.75 0.2 0.05 0.06 0.21 0.73 0.2 0.4 0.4 0.5 0.4 0.1 0.01 0.04 0.95 0.05 0.2 0.75 0.35 0.35 0.3 0.4 0.3 0.3 0.7 0.2 0.1 0.9 0.08 0.02 0.15 0.3 0.55 0.25 0.5 0.25 0.6 0.3 0.1 0.03 0.17 0.8 0.2 0.3 0.5 0.45 0.4 0.15 0.01 0.04 0.95 0.05 0.18 0.77 0.25 0.4 0.35 0.35 0.35 0.3 0.55 0.4 0.05 0.85 0.13 0.02 0.07000000000000001 0.38 0.55 0.2 0.6 0.2 0.5 0.43 0.07000000000000001 0 0.05 0.95 0.05 0.35 0.6 0.25 0.5 0.25 0 0.02 0.98 0 0.05 0.95 0.04 0.16 0.8 0.3 0.4 0.3 0.5 0.3 0.2 0.75 0.2 0.05 0.15 0.35 0.5 0.2 0.6 0.2 0.15 0.7 0.15 0.07000000000000001 0.23 0.7 0.13 0.47 0.4 0.1 0.75 0.15 0.02 0.18 0.8 0.04 0.26 0.7 0.07000000000000001 0.3 0.63 0.35 0.45 0.2 0.4 0.5 0.1 0.58 0.4 0.02 0.1 0.25 0.65 0.15 0.45 0.4 0.4 0.45 0.15 0.02 0.18 0.8 0.05 0.25 0.7 0.15 0.35 0.5 0.01 0.09 0.9 0.03 0.17 0.8 0.08 0.32 0.6 0.3 0.55 0.15 0.4 0.5 0.1 0.5 0.43 0.07000000000000001 0.1 0.35 0.55 0.25 0.5 0.25 0.3 0.5 0.2 0.05 0.22 0.73 0.1 0.35 0.55 0.15 0.35 0.5 0.02 0.1 0.88 0.04 0.16 0.8 0.1 0.25 0.65</probabilities>
+		</cpt>
+		<cpt id="InsSclInScen">
+			<state id="LessUnstable" label="F143" />
+			<state id="Average" label="F144" />
+			<state id="MoreUnstable" label="F145" />
+			<parents>AMInsWliScen InsChange</parents>
+			<probabilities>1 0 0 0.9 0.1 0 0.4 0.35 0.25 0.6 0.4 0 0.15 0.7 0.15 0 0.4 0.6 0.25 0.35 0.4 0 0.1 0.9 0 0 1</probabilities>
+		</cpt>
+		<cpt id="ScenRel3_4">
+			<state id="ACEFK" label="F146" />
+			<state id="B" label="F147" />
+			<state id="D" label="F148" />
+			<state id="GJ" label="F149" />
+			<state id="HI" label="F150" />
+			<parents>Scenario</parents>
+			<probabilities>1 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0</probabilities>
+		</cpt>
+		<cpt id="LatestCIN">
+			<state id="None" label="F151" />
+			<state id="PartInhibit" label="F152" />
+			<state id="Stifling" label="F153" />
+			<state id="TotalInhibit" label="F154" />
+			<probabilities>0.4 0.4 0.15 0.05</probabilities>
+		</cpt>
+		<cpt id="LLIW">
+			<state id="Unfavorable" label="F155" />
+			<state id="Weak" label="F156" />
+			<state id="Moderate" label="F157" />
+			<state id="Strong" label="F158" />
+			<probabilities>0.12 0.32 0.38 0.18</probabilities>
+		</cpt>
+		<cpt id="CurPropConv">
+			<state id="None" label="F159" />
+			<state id="Slight" label="F160" />
+			<state id="Moderate" label="F161" />
+			<state id="Strong" label="F162" />
+			<parents>LatestCIN LLIW</parents>
+			<probabilities>0.7 0.28 0.02 0 0.1 0.5 0.3 0.1 0.01 0.14 0.35 0.5 0 0.02 0.18 0.8 0.9 0.09 0.01 0 0.65 0.25 0.09 0.01 0.25 0.35 0.3 0.1 0.01 0.15 0.33 0.51 0.95 0.05 0 0 0.75 0.23 0.02 0 0.4 0.4 0.18 0.02 0.2 0.3 0.35 0.15 1 0 0 0 0.95 0.05 0 0 0.75 0.2 0.05 0 0.5 0.35 0.1 0.05</probabilities>
+		</cpt>
+		<cpt id="ScnRelPlFcst">
+			<state id="A" label="F163" />
+			<state id="B" label="F164" />
+			<state id="C" label="F165" />
+			<state id="D" label="F166" />
+			<state id="E" label="F167" />
+			<state id="F" label="F168" />
+			<state id="G" label="F169" />
+			<state id="H" label="F170" />
+			<state id="I" label="F171" />
+			<state id="J" label="F172" />
+			<state id="K" label="F173" />
+			<parents>Scenario</parents>
+			<probabilities>1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1</probabilities>
+		</cpt>
+		<cpt id="PlainsFcst">
+			<state id="NIL" label="F174" />
+			<state id="SIG" label="F175" />
+			<state id="SVR" label="F176" />
+			<parents>CurPropConv InsSclInScen CapInScen ScnRelPlFcst</parents>
+			<probabilities>0.75 0.2 0.05 0.75 0.2 0.05 0.9 0.08 0.02 0.9 0.06 0.04 0.88 0.1 0.02 0.92 0.08 0 0.85 0.13 0.02 1 0 0 0.9 0.08 0.02 0.9 0.08 0.02 0.95 0.04 0.01 0.75 0.2 0.05 0.65 0.3 0.05 0.9 0.08 0.02 0.91 0.05 0.04 0.85 0.13 0.02 0.9 0.1 0 0.84 0.12 0.04 0.99 0.01 0 0.88 0.1 0.02 0.92 0.06 0.02 0.96 0.03 0.01 0.75 0.2 0.05 0.75 0.2 0.05 0.95 0.04 0.01 0.9300000000000001 0.04 0.03 0.92 0.06 0.02 0.87 0.13 0 0.9 0.06 0.04 0.98 0.02 0 0.92 0.06 0.02 0.95 0.04 0.01 0.97 0.02 0.01 0.5 0.3 0.2 0.6 0.3 0.1 0.8 0.14 0.06 0.85 0.09 0.06 0.85 0.1 0.05 0.88 0.11 0.01 0.8 0.17 0.03 0.92 0.06 0.02 0.8 0.12 0.08 0.75 0.22 0.03 0.9 0.08 0.02 0.35 0.3 0.35 0.55 0.3 0.15 0.82 0.13 0.05 0.82 0.1 0.08 0.75 0.18 0.07000000000000001 0.88 0.11 0.01 0.75 0.2 0.05 0.9 0.07000000000000001 0.03 0.7 0.2 0.1 0.8 0.15 0.05 0.9 0.08 0.02 0.5 0.2 0.3 0.6 0.25 0.15 0.85 0.1 0.05 0.85 0.07000000000000001 0.08 0.75 0.15 0.1 0.85 0.14 0.01 0.75 0.2 0.05 0.94 0.05 0.01 0.65 0.22 0.13 0.83 0.1 0.07000000000000001 0.9300000000000001 0.06 0.01 0.35 0.2 0.45 0.45 0.35 0.2 0.8 0.1 0.1 0.72 0.14 0.14 0.78 0.15 0.07000000000000001 0.86 0.12 0.02 0.65 0.25 0.1 0.85 0.1 0.05 0.65 0.2 0.15 0.72 0.2 0.08 0.85 0.1 0.05 0.25 0.15 0.6 0.45 0.35 0.2 0.65 0.2 0.15 0.55 0.2 0.25 0.55 0.25 0.2 0.8100000000000001 0.17 0.02 0.6 0.28 0.12 0.8 0.13 0.07000000000000001 0.6 0.2 0.2 0.75 0.15 0.1 0.88 0.08 0.04 0.4 0.08 0.52 0.45 0.25 0.3 0.75 0.1 0.15 0.65 0.15 0.2 0.52 0.25 0.23 0.82 0.16 0.02 0.65 0.27 0.08 0.85 0.09 0.06 0.5 0.2 0.3 0.77 0.1 0.13 0.9 0.07000000000000001 0.03 0.7 0.25 0.05 0.6 0.33 0.07000000000000001 0.82 0.13 0.05 0.85 0.1 0.05 0.82 0.15 0.03 0.85 0.14 0.01 0.8 0.17 0.03 0.97 0.02 0.01 0.88 0.1 0.02 0.86 0.1 0.04 0.88 0.1 0.02 0.65 0.25 0.1 0.58 0.32 0.1 0.8 0.15 0.05 0.85 0.1 0.05 0.8 0.16 0.04 0.83 0.16 0.01 0.77 0.17 0.06 0.9300000000000001 0.06 0.01 0.85 0.12 0.03 0.85 0.1 0.05 0.9 0.08 0.02 0.6 0.3 0.1 0.65 0.28 0.07000000000000001 0.9 0.08 0.02 0.85 0.1 0.05 0.82 0.13 0.05 0.8 0.19 0.01 0.8 0.13 0.07000000000000001 0.91 0.08 0.01 0.85 0.12 0.03 0.9 0.08 0.02 0.9300000000000001 0.06 0.01 0.3 0.4 0.3 0.55 0.34 0.11 0.7 0.2 0.1 0.75 0.15 0.1 0.62 0.28 0.1 0.85 0.14 0.01 0.75 0.2 0.05 0.82 0.14 0.04 0.6 0.25 0.15 0.6800000000000001 0.22 0.1 0.82 0.15 0.03 0.28 0.37 0.35 0.48 0.35 0.17 0.7 0.2 0.1 0.7 0.17 0.13 0.6 0.29 0.11 0.82 0.16 0.02 0.63 0.3 0.07000000000000001 0.8 0.15 0.05 0.5 0.3 0.2 0.7 0.2 0.1 0.8 0.16 0.04 0.4 0.28 0.32 0.5 0.25 0.25 0.72 0.18 0.1 0.65 0.2 0.15 0.55 0.3 0.15 0.78 0.2 0.02 0.55 0.35 0.1 0.85 0.12 0.03 0.45 0.3 0.25 0.73 0.15 0.12 0.85 0.12 0.03 0.3 0.25 0.45 0.4 0.36 0.24 0.65 0.2 0.15 0.6 0.2 0.2 0.6 0.28 0.12 0.83 0.14 0.03 0.45 0.4 0.15 0.7 0.18 0.12 0.55 0.25 0.2 0.6 0.25 0.15 0.72 0.2 0.08 0.22 0.17 0.61 0.35 0.37 0.28 0.45 0.3 0.25 0.45 0.25 0.3 0.48 0.29 0.23 0.72 0.25 0.03 0.43 0.4 0.17 0.6800000000000001 0.2 0.12 0.35 0.3 0.35 0.6 0.2 0.2 0.74 0.16 0.1 0.27 0.1 0.63 0.35 0.3 0.35 0.55 0.22 0.23 0.45 0.25 0.3 0.42 0.3 0.28 0.74 0.22 0.04 0.45 0.4 0.15 0.77 0.13 0.1 0.3 0.25 0.45 0.6800000000000001 0.15 0.17 0.75 0.15 0.1 0.5 0.4 0.1 0.45 0.42 0.13 0.75 0.18 0.07000000000000001 0.75 0.15 0.1 0.72 0.22 0.06 0.78 0.21 0.01 0.66 0.27 0.07000000000000001 0.88 0.1 0.02 0.7 0.22 0.08 0.78 0.16 0.06 0.8 0.16 0.04 0.45 0.35 0.2 0.45 0.35 0.2 0.7 0.2 0.1 0.72 0.17 0.11 0.7 0.22 0.08 0.75 0.24 0.01 0.62 0.3 0.08 0.85 0.12 0.03 0.75 0.15 0.1 0.76 0.17 0.07000000000000001 0.8 0.16 0.04 0.35 0.4 0.25 0.45 0.4 0.15 0.75 0.19 0.06 0.7 0.2 0.1 0.6 0.3 0.1 0.72 0.27 0.01 0.6 0.3 0.1 0.8 0.16 0.04 0.75 0.17 0.08 0.75 0.2 0.05 0.88 0.1 0.02 0.2 0.45 0.35 0.4 0.4 0.2 0.7 0.2 0.1 0.65 0.22 0.13 0.5 0.34 0.16 0.74 0.24 0.02 0.6 0.3 0.1 0.67 0.24 0.09 0.35 0.4 0.25 0.6 0.25 0.15 0.75 0.2 0.05 0.23 0.4 0.37 0.38 0.35 0.27 0.58 0.25 0.17 0.55 0.25 0.2 0.53 0.32 0.15 0.73 0.25 0.02 0.35 0.53 0.12 0.65 0.24 0.11 0.3 0.4 0.3 0.6 0.24 0.16 0.6800000000000001 0.24 0.08 0.3 0.34 0.36 0.35 0.35 0.3 0.55 0.25 0.2 0.5 0.27 0.23 0.4 0.38 0.22 0.7 0.28 0.02 0.35 0.5 0.15 0.6 0.25 0.15 0.35 0.35 0.3 0.62 0.22 0.16 0.7 0.22 0.08 0.25 0.28 0.47 0.3 0.38 0.32 0.45 0.3 0.25 0.5 0.25 0.25 0.4 0.35 0.25 0.72 0.24 0.04 0.25 0.57 0.18 0.57 0.28 0.15 0.25 0.35 0.4 0.48 0.26 0.26 0.6 0.26 0.14 0.19 0.18 0.63 0.25 0.4 0.35 0.35 0.3 0.35 0.35 0.3 0.35 0.35 0.35 0.3 0.65 0.3 0.05 0.22 0.58 0.2 0.45 0.35 0.2 0.25 0.34 0.41 0.48 0.26 0.26 0.58 0.25 0.17 0.15 0.16 0.69 0.25 0.3 0.45 0.4 0.3 0.3 0.3 0.3 0.4 0.25 0.4 0.35 0.6 0.34 0.06 0.18 0.62 0.2 0.47 0.3 0.23 0.25 0.3 0.45 0.5 0.22 0.28 0.5 0.27 0.23 0.4 0.45 0.15 0.35 0.45 0.2 0.6 0.27 0.13 0.6 0.22 0.18 0.55 0.32 0.13 0.69 0.29 0.02 0.54 0.36 0.1 0.75 0.2 0.05 0.55 0.3 0.15 0.7 0.22 0.08 0.7 0.25 0.05 0.35 0.4 0.25 0.35 0.4 0.25 0.55 0.3 0.15 0.55 0.27 0.18 0.5 0.35 0.15 0.65 0.33 0.02 0.38 0.5 0.12 0.7 0.24 0.06 0.65 0.2 0.15 0.67 0.23 0.1 0.7 0.25 0.05 0.2 0.45 0.35 0.3 0.45 0.25 0.55 0.3 0.15 0.5 0.3 0.2 0.45 0.38 0.17 0.6 0.38 0.02 0.28 0.57 0.15 0.65 0.28 0.07000000000000001 0.63 0.25 0.12 0.62 0.28 0.1 0.8 0.17 0.03 0.16 0.47 0.37 0.3 0.45 0.25 0.45 0.32 0.23 0.52 0.26 0.22 0.35 0.45 0.2 0.65 0.32 0.03 0.48 0.39 0.13 0.58 0.3 0.12 0.25 0.45 0.3 0.5 0.28 0.22 0.65 0.27 0.08 0.18 0.45 0.37 0.3 0.35 0.35 0.45 0.3 0.25 0.45 0.3 0.25 0.35 0.43 0.22 0.62 0.35 0.03 0.2 0.65 0.15 0.52 0.33 0.15 0.23 0.42 0.35 0.47 0.3 0.23 0.55 0.3 0.15 0.23 0.4 0.37 0.25 0.4 0.35 0.4 0.3 0.3 0.4 0.3 0.3 0.3 0.45 0.25 0.57 0.4 0.03 0.15 0.65 0.2 0.5 0.33 0.17 0.25 0.36 0.39 0.5 0.28 0.22 0.55 0.3 0.15 0.18 0.3 0.52 0.2 0.4 0.4 0.3 0.3 0.4 0.4 0.3 0.3 0.25 0.48 0.27 0.63 0.32 0.05 0.15 0.63 0.22 0.4 0.38 0.22 0.2 0.37 0.43 0.3 0.35 0.35 0.5 0.32 0.18 0.15 0.2 0.65 0.18 0.4 0.42 0.25 0.35 0.4 0.25 0.35 0.4 0.25 0.42 0.33 0.58 0.36 0.06 0.13 0.62 0.25 0.3 0.45 0.25 0.22 0.35 0.43 0.35 0.32 0.33 0.5 0.3 0.2 0.1 0.2 0.7 0.2 0.3 0.5 0.2 0.4 0.4 0.23 0.3 0.47 0.15 0.45 0.4 0.5 0.42 0.08 0.1 0.65 0.25 0.28 0.4 0.32 0.2 0.32 0.48 0.3 0.28 0.42 0.38 0.32 0.3</probabilities>
+		</cpt>
+		<cpt id="N34StarFcst">
+			<state id="NIL" label="F177" />
+			<state id="SIG" label="F178" />
+			<state id="SVR" label="F179" />
+			<parents>ScenRel3_4 PlainsFcst</parents>
+			<probabilities>0.94 0.05 0.01 0.06 0.89 0.05 0.01 0.05 0.94 0.98 0.02 0 0.04 0.94 0.02 0 0.03 0.97 0.92 0.06 0.02 0.01 0.89 0.1 0 0.01 0.99 0.92 0.06 0.02 0.03 0.92 0.05 0.01 0.04 0.95 0.99 0.01 0 0.09 0.9 0.01 0.03 0.12 0.85</probabilities>
+		</cpt>
+		<cpt id="R5Fcst">
+			<state id="NIL" label="F180" />
+			<state id="SIG" label="F181" />
+			<state id="SVR" label="F182" />
+			<parents>MountainFcst N34StarFcst</parents>
+			<probabilities>1 0 0 0 1 0 0 0 1 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1</probabilities>
+		</cpt>
+		<cpt id="Dewpoints">
+			<state id="LowEvrywhere" label="F183" />
+			<state id="LowAtStation" label="F184" />
+			<state id="LowSHighN" label="F185" />
+			<state id="LowNHighS" label="F186" />
+			<state id="LowMtsHighPl" label="F187" />
+			<state id="HighEvrywher" label="F188" />
+			<state id="Other" label="F189" />
+			<parents>Scenario</parents>
+			<probabilities>0.04 0.05 0.15 0.05 0.19 0.3 0.22 0.05 0.07000000000000001 0.15 0.1 0.3 0.27 0.06 0.4 0.25 0 0.15 0.05 0.02 0.13 0.13 0.22 0.18 0.07000000000000001 0.34 0.03 0.03 0.15 0.2 0.2 0.18 0.11 0.11 0.05 0 0 0 0 0 0.98 0.02 0.5 0.27 0.15 0.02 0.02 0 0.04 0 0.02 0.1 0.05 0.5 0.2 0.13 0 0.02 0.7 0 0.2 0.04 0.04 0.1 0.45 0.1 0.05 0.26 0.02 0.02 0.1 0.1 0.1 0.2 0.05 0.1 0.35</probabilities>
+		</cpt>
+		<cpt id="LowLLapse">
+			<state id="CloseToDryAd" label="F190" />
+			<state id="Steep" label="F191" />
+			<state id="ModerateOrLe" label="F192" />
+			<state id="Stable" label="F193" />
+			<parents>Scenario</parents>
+			<probabilities>0.04 0.25 0.35 0.36 0.07000000000000001 0.31 0.31 0.31 0.35 0.47 0.14 0.04 0.4 0.4 0.13 0.07000000000000001 0.45 0.35 0.15 0.05 0.01 0.35 0.45 0.19 0.78 0.19 0.03 0 0 0.02 0.33 0.65 0.22 0.4 0.3 0.08 0.13 0.4 0.35 0.12 0.09 0.4 0.33 0.18</probabilities>
+		</cpt>
+		<cpt id="MeanRH">
+			<state id="VeryMoist" label="F194" />
+			<state id="Average" label="F195" />
+			<state id="Dry" label="F196" />
+			<parents>Scenario</parents>
+			<probabilities>0.33 0.5 0.17 0.4 0.4 0.2 0.05 0.45 0.5 0.1 0.5 0.4 0.05 0.65 0.3 1 0 0 0 0.07000000000000001 0.9300000000000001 0.4 0.55 0.05 0.2 0.45 0.35 0.05 0.55 0.4 0.2 0.4 0.4</probabilities>
+		</cpt>
+		<cpt id="MidLLapse">
+			<state id="CloseToDryAd" label="F197" />
+			<state id="Steep" label="F198" />
+			<state id="ModerateOrLe" label="F199" />
+			<parents>Scenario</parents>
+			<probabilities>0.25 0.55 0.2 0.25 0.5 0.25 0.4 0.38 0.22 0.43 0.37 0.2 0.02 0.38 0.6 0 0.1 0.9 0.84 0.16 0 0.25 0.31 0.44 0.41 0.29 0.3 0.23 0.42 0.35 0.16 0.28 0.5600000000000001</probabilities>
+		</cpt>
+		<cpt id="MvmtFeatures">
+			<state id="StrongFront" label="F200" />
+			<state id="MarkedUpper" label="F201" />
+			<state id="OtherRapid" label="F202" />
+			<state id="NoMajor" label="F203" />
+			<parents>Scenario</parents>
+			<probabilities>0.25 0.55 0.2 0 0.05 0.1 0.1 0.75 0.1 0.3 0.3 0.3 0.18 0.38 0.34 0.1 0.02 0.02 0.26 0.7 0.05 0.07000000000000001 0.05 0.83 0.1 0.25 0.15 0.5 0 0.6 0.1 0.3 0.2 0.1 0.2 0.5 0.04 0 0.04 0.92 0.5 0.35 0.09 0.06</probabilities>
+		</cpt>
+		<cpt id="RHRatio">
+			<state id="MoistMDryL" label="F204" />
+			<state id="DryMMoistL" label="F205" />
+			<state id="Other" label="F206" />
+			<parents>Scenario</parents>
+			<probabilities>0.05 0.5 0.45 0.1 0.5 0.4 0.4 0.15 0.45 0.2 0.45 0.35 0.8 0.05 0.15 0 0 1 0.6 0 0.4 0 0.7 0.3 0.1 0.7 0.2 0.4 0.4 0.2 0.15 0.45 0.4</probabilities>
+		</cpt>
+		<cpt id="SfcWndShfDis">
+			<state id="DenvCyclone" label="F207" />
+			<state id="E_W_N" label="F208" />
+			<state id="E_W_S" label="F209" />
+			<state id="MovingFtorOt" label="F210" />
+			<state id="DryLine" label="F211" />
+			<state id="None" label="F212" />
+			<state id="Other" label="F213" />
+			<parents>Scenario</parents>
+			<probabilities>0.65 0.05 0.1 0.08 0.04 0.07000000000000001 0.01 0.65 0.05 0.1 0.1 0.02 0.07000000000000001 0.01 0 0.65 0.2 0.02 0.06 0.05 0.02 0.12 0.02 0.02 0.02 0.45 0.27 0.1 0.06 0.14 0.04 0.04 0.25 0.4 0.07000000000000001 0.1 0.1 0.1 0.02 0 0.5600000000000001 0.12 0.02 0.05 0.05 0 0.35 0.33 0.2 0.01 0.1 0.15 0.4 0 0.23 0.11 0.02 0.1 0.5 0.3 0.01 0.02 0.05 0.06 0.08 0.04 0.02 0.6 0.14 0.06 0.05 0.13 0.05 0.39 0.13 0.15 0.1</probabilities>
+		</cpt>
+		<cpt id="SynForcng">
+			<state id="SigNegative" label="F214" />
+			<state id="NegToPos" label="F215" />
+			<state id="SigPositive" label="F216" />
+			<state id="PosToNeg" label="F217" />
+			<state id="LittleChange" label="F218" />
+			<parents>Scenario</parents>
+			<probabilities>0.35 0.25 0 0.35 0.05 0.06 0.1 0.06 0.3 0.48 0.1 0.27 0.4 0.08 0.15 0.35 0.2 0.1 0.25 0.1 0.15 0.15 0.1 0.15 0.45 0.15 0.1 0.05 0.15 0.55 0.15 0.1 0.1 0.25 0.4 0.25 0.25 0.25 0.15 0.1 0.25 0.2 0.15 0.2 0.2 0.01 0.05 0.01 0.05 0.88 0.2 0.2 0.35 0.15 0.1</probabilities>
+		</cpt>
+		<cpt id="TempDis">
+			<state id="QStationary" label="F219" />
+			<state id="Moving" label="F220" />
+			<state id="None" label="F221" />
+			<state id="Other" label="F222" />
+			<parents>Scenario</parents>
+			<probabilities>0.13 0.15 0.1 0.62 0.15 0.15 0.25 0.45 0.12 0.1 0.35 0.43 0.1 0.15 0.4 0.35 0.04 0.04 0.82 0.1 0.05 0.12 0.75 0.08 0.03 0.03 0.84 0.1 0.05 0.4 0.5 0.05 0.8 0.19 0 0.01 0.1 0.05 0.4 0.45 0.2 0.3 0.3 0.2</probabilities>
+		</cpt>
+		<cpt id="WindAloft">
+			<state id="LV" label="F223" />
+			<state id="SWQuad" label="F224" />
+			<state id="NWQuad" label="F225" />
+			<state id="AllElse" label="F226" />
+			<parents>Scenario</parents>
+			<probabilities>0 0.95 0.01 0.04 0.2 0.3 0.2 0.3 0.05 0.09 0.59 0.27 0.03 0.32 0.42 0.23 0.07000000000000001 0.66 0.02 0.25 0.5 0 0 0.5 0.25 0.3 0.25 0.2 0.2 0.14 0.43 0.23 0.2 0.41 0.1 0.29 0.96 0 0 0.04 0.03 0.08 0.33 0.5600000000000001</probabilities>
+		</cpt>
+		<cpt id="WindFieldMt">
+			<state id="Westerly" label="F227" />
+			<state id="LVorOther" label="F228" />
+			<parents>Scenario</parents>
+			<probabilities>0.8 0.2 0.35 0.65 0.75 0.25 0.7 0.3 0.65 0.35 0.15 0.85 0.7 0.3 0.3 0.7 0.5 0.5 0.01 0.99 0.7 0.3</probabilities>
+		</cpt>
+		<cpt id="WindFieldPln">
+			<state id="LV" label="F229" />
+			<state id="DenvCyclone" label="F230" />
+			<state id="LongAnticyc" label="F231" />
+			<state id="E_NE" label="F232" />
+			<state id="SEQuad" label="F233" />
+			<state id="WidespdDnsl" label="F234" />
+			<parents>Scenario</parents>
+			<probabilities>0.05 0.6 0.02 0.1 0.23 0 0.08 0.6 0.02 0.1 0.2 0 0.1 0 0.75 0 0 0.15 0.1 0.15 0.2 0.05 0.3 0.2 0.43 0.1 0.15 0.06 0.06 0.2 0.6 0.07000000000000001 0.01 0.12 0.2 0 0.25 0.01 0.3 0.01 0.03 0.4 0.04 0.02 0.04 0.8 0.1 0 0.2 0.3 0.05 0.37 0.07000000000000001 0.01 0.6 0.08 0.07000000000000001 0.03 0.2 0.02 0.1 0.05 0.1 0.05 0.2 0.5</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.0.5590.0" name="Hailfinder 2.5 network by Edwards &amp; Abramson" faultnameformat="nodestate">
+			<comment>Hailfinder is a normative system that forecasts severe summer hail in northeastern Colorado. It has been generously contributed to the community by Ward Edwards and Bruce Abramson.\nHailfinder was described in the following publication: Abramson, B., J. Brown, W. Edwards, A. Murphy, R. Winkler (1996). Hailfinder: A Bayesian system forforecasting severe weather. International Journal of Forecasting 12(1): 57-72.</comment>
+			<node id="N0_7muVerMo">
+				<name>10_7muVerMo</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>316 112 410 148</position>
+			</node>
+			<node id="SubjVertMo">
+				<name>SubjVertMo</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>325 152 401 188</position>
+			</node>
+			<node id="QGVertMotion">
+				<name>QGVertMotion</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>321 192 405 228</position>
+			</node>
+			<node id="CombVerMo">
+				<name>CombVerMo</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>431 134 507 170</position>
+			</node>
+			<node id="AreaMeso_ALS">
+				<name>AreaMeso_ALS</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>527 180 618 216</position>
+			</node>
+			<node id="SatContMoist">
+				<name>SatContMoist</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>322 252 405 288</position>
+			</node>
+			<node id="RaoContMoist">
+				<name>RaoContMoist</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>321 292 405 328</position>
+			</node>
+			<node id="CombMoisture">
+				<name>CombMoisture</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>432 267 517 303</position>
+			</node>
+			<node id="AreaMoDryAir">
+				<name>AreaMoDryAir</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>533 244 619 280</position>
+			</node>
+			<node id="VISCloudCov">
+				<name>VISCloudCov</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>325 392 401 428</position>
+			</node>
+			<node id="IRCloudCover">
+				<name>IRCloudCover</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>319 352 408 388</position>
+			</node>
+			<node id="CombClouds">
+				<name>CombClouds</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>432 333 508 369</position>
+			</node>
+			<node id="CldShadeOth">
+				<name>CldShadeOth</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>635 260 711 296</position>
+			</node>
+			<node id="AMInstabMt">
+				<name>AMInstabMt</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>541 344 617 380</position>
+			</node>
+			<node id="InsInMt">
+				<name>InsInMt</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>634 324 710 360</position>
+			</node>
+			<node id="WndHodograph">
+				<name>WndHodograph</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>750 316 855 352</position>
+			</node>
+			<node id="OutflowFrMt">
+				<name>OutflowFrMt</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>854 368 930 404</position>
+			</node>
+			<node id="MorningBound">
+				<name>MorningBound</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>873 301 967 337</position>
+			</node>
+			<node id="Boundaries">
+				<name>Boundaries</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>987 338 1063 374</position>
+			</node>
+			<node id="CldShadeConv">
+				<name>CldShadeConv</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>803 271 899 307</position>
+			</node>
+			<node id="CompPlFcst">
+				<name>CompPlFcst</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1023 235 1099 271</position>
+			</node>
+			<node id="CapChange">
+				<name>CapChange</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1087 289 1163 325</position>
+			</node>
+			<node id="LoLevMoistAd">
+				<name>LoLevMoistAd</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1058 190 1144 226</position>
+			</node>
+			<node id="InsChange">
+				<name>InsChange</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1133 248 1209 284</position>
+			</node>
+			<node id="MountainFcst">
+				<name>MountainFcst</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>813 413 900 449</position>
+			</node>
+			<node id="Date">
+				<name>Date</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>8 4 84 40</position>
+				<comment>The states were originally named 15May-14Jun, etc.</comment>
+			</node>
+			<node id="Scenario">
+				<name>Scenario</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>109 6 185 42</position>
+			</node>
+			<node id="ScenRelAMCIN">
+				<name>ScenRelAMCIN</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>520 118 624 157</position>
+			</node>
+			<node id="MorningCIN">
+				<name>MorningCIN</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>677 115 753 151</position>
+			</node>
+			<node id="AMCINInScen">
+				<name>AMCINInScen</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>768 162 852 198</position>
+			</node>
+			<node id="CapInScen">
+				<name>CapInScen</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1106 339 1182 375</position>
+			</node>
+			<node id="ScenRelAMIns">
+				<name>ScenRelAMIns</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>602 64 696 100</position>
+			</node>
+			<node id="LIfr12ZDENSd">
+				<name>LIfr12ZDENSd</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>908 66 996 102</position>
+				<comment>The states of this node were originally named:     \t   LIGt0,   -1GtLIGt-4,   -5GtLIGt-8,   LILt_8     \t</comment>
+			</node>
+			<node id="AMDewptCalPl">
+				<name>AMDewptCalPl</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>805 67 893 103</position>
+			</node>
+			<node id="AMInsWliScen">
+				<name>AMInsWliScen</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1062 130 1148 166</position>
+			</node>
+			<node id="InsSclInScen">
+				<name>InsSclInScen</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1227 241 1312 277</position>
+			</node>
+			<node id="ScenRel3_4">
+				<name>ScenRel3_4</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1133 10 1209 46</position>
+			</node>
+			<node id="LatestCIN">
+				<name>LatestCIN</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1223 393 1299 429</position>
+			</node>
+			<node id="LLIW">
+				<name>LLIW</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1138 380 1214 416</position>
+			</node>
+			<node id="CurPropConv">
+				<name>CurPropConv</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1264 349 1357 385</position>
+			</node>
+			<node id="ScnRelPlFcst">
+				<name>ScnRelPlFcst</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1032 39 1108 75</position>
+			</node>
+			<node id="PlainsFcst">
+				<name>PlainsFcst</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1356 294 1432 330</position>
+			</node>
+			<node id="N34StarFcst">
+				<name>234StarFcst</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1432 236 1508 274</position>
+			</node>
+			<node id="R5Fcst">
+				<name>R5Fcst</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>1428 478 1504 514</position>
+			</node>
+			<node id="Dewpoints">
+				<name>Dewpoints</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>238 347 314 383</position>
+			</node>
+			<node id="LowLLapse">
+				<name>LowLLapse</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>135 276 211 312</position>
+			</node>
+			<node id="MeanRH">
+				<name>MeanRH</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>135 236 211 272</position>
+			</node>
+			<node id="MidLLapse">
+				<name>MidLLapse</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>135 196 211 232</position>
+			</node>
+			<node id="MvmtFeatures">
+				<name>MvmtFeatures</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>135 156 211 192</position>
+			</node>
+			<node id="RHRatio">
+				<name>RHRatio</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>51 198 127 234</position>
+			</node>
+			<node id="SfcWndShfDis">
+				<name>SfcWndShfDis</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>231 268 321 304</position>
+				<comment>State E_W_N was originally named E-W(N) and state E_W_S was E_W(S)</comment>
+			</node>
+			<node id="SynForcng">
+				<name>SynForcng</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>51 154 127 190</position>
+			</node>
+			<node id="TempDis">
+				<name>TempDis</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>51 109 127 145</position>
+			</node>
+			<node id="WindAloft">
+				<name>WindAloft</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>238 307 314 343</position>
+			</node>
+			<node id="WindFieldMt">
+				<name>WindFieldMt</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>238 228 314 264</position>
+			</node>
+			<node id="WindFieldPln">
+				<name>WindFieldPln</name>
+				<interior color="e5f6f7" />
+				<outline color="0000bb" />
+				<font color="000000" name="Arial" size="8" />
+				<position>235 187 317 223</position>
+				<comment>State E_NE was originally named E-NE.</comment>
+			</node>
+			<textbox>
+				<caption>Hailfinder is a normative system that forecasts severe summer hail in northeastern Colorado. It has been generously contributed to the community by Ward Edwards and Bruce Abramson.\nHailfinder was described in the following publication: Abramson, B., J. Brown, W. Edwards, A. Murphy, R. Winkler (1996). Hailfinder: A Bayesian system for forecasting severe weather. International Journal of Forecasting 12(1): 57-72. More information about the Hailfinder project can be found at http://www.sis.pitt.edu/~dsl/hailfinder/</caption>
+				<font color="000000" name="Arial" size="10" bold="true" />
+				<position>10 461 775 541</position>
+			</textbox>
+		</genie>
+	</extensions>
+</smile>

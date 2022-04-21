@@ -1,0 +1,17 @@
+Num runs = 1
+Num vars = 10
+Num edges = 20
+Num cases = 10000
+Sample prior = 1
+Structure prior = 1
+Depth = 1
+
+
+
+
+******************************** RUN 1 ********************************
+
+
+Thu May 16 19:56:27 EDT 2019
+Graph done
+Elapsed (simulating the data): 65 ms

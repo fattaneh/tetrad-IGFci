@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph>
+  <variables>
+    <variable>LVFailure</variable>
+    <variable>History</variable>
+    <variable>Hypovolemia</variable>
+    <variable>LVEDVolume</variable>
+    <variable>CVP</variable>
+    <variable>PCWP</variable>
+    <variable>StrokeVolume</variable>
+    <variable>ErrLowOutput</variable>
+    <variable>InsuffAnesth</variable>
+    <variable>Anaphylaxis</variable>
+    <variable>TPR</variable>
+    <variable>FiO2</variable>
+    <variable>Intubation</variable>
+    <variable>KinkedTube</variable>
+    <variable>Disconnect</variable>
+    <variable>MinVolSet</variable>
+    <variable>VentMach</variable>
+    <variable>VentTube</variable>
+    <variable>VentLung</variable>
+    <variable>VentAlv</variable>
+    <variable>PVSat</variable>
+    <variable>PulmEmbolus</variable>
+    <variable>Shunt</variable>
+    <variable>SaO2</variable>
+    <variable>ArtCO2</variable>
+    <variable>Catechol</variable>
+    <variable>HR</variable>
+    <variable>HRBP</variable>
+    <variable>ErrCauter</variable>
+    <variable>HREKG</variable>
+    <variable>HRSat</variable>
+    <variable>ExpCO2</variable>
+    <variable>MinVol</variable>
+    <variable>PAP</variable>
+    <variable>Press</variable>
+    <variable>CO</variable>
+    <variable>BP</variable>
+  </variables>
+  <edges>
+    <edge>LVFailure --&gt; History</edge>
+    <edge>Hypovolemia --&gt; LVEDVolume</edge>
+    <edge>LVFailure --&gt; LVEDVolume</edge>
+    <edge>LVEDVolume --&gt; CVP</edge>
+    <edge>LVEDVolume --&gt; PCWP</edge>
+    <edge>Hypovolemia --&gt; StrokeVolume</edge>
+    <edge>LVFailure --&gt; StrokeVolume</edge>
+    <edge>Anaphylaxis --&gt; TPR</edge>
+    <edge>MinVolSet --&gt; VentMach</edge>
+    <edge>Disconnect --&gt; VentTube</edge>
+    <edge>VentMach --&gt; VentTube</edge>
+    <edge>KinkedTube --&gt; VentLung</edge>
+    <edge>Intubation --&gt; VentLung</edge>
+    <edge>VentTube --&gt; VentLung</edge>
+    <edge>Intubation --&gt; VentAlv</edge>
+    <edge>VentLung --&gt; VentAlv</edge>
+    <edge>FiO2 --&gt; PVSat</edge>
+    <edge>VentAlv --&gt; PVSat</edge>
+    <edge>PulmEmbolus --&gt; Shunt</edge>
+    <edge>Intubation --&gt; Shunt</edge>
+    <edge>Shunt --&gt; SaO2</edge>
+    <edge>PVSat --&gt; SaO2</edge>
+    <edge>VentAlv --&gt; ArtCO2</edge>
+    <edge>InsuffAnesth --&gt; Catechol</edge>
+    <edge>SaO2 --&gt; Catechol</edge>
+    <edge>TPR --&gt; Catechol</edge>
+    <edge>ArtCO2 --&gt; Catechol</edge>
+    <edge>Catechol --&gt; HR</edge>
+    <edge>ErrLowOutput --&gt; HRBP</edge>
+    <edge>HR --&gt; HRBP</edge>
+    <edge>ErrCauter --&gt; HREKG</edge>
+    <edge>HR --&gt; HREKG</edge>
+    <edge>ErrCauter --&gt; HRSat</edge>
+    <edge>HR --&gt; HRSat</edge>
+    <edge>ArtCO2 --&gt; ExpCO2</edge>
+    <edge>VentLung --&gt; ExpCO2</edge>
+    <edge>Intubation --&gt; MinVol</edge>
+    <edge>VentLung --&gt; MinVol</edge>
+    <edge>PulmEmbolus --&gt; PAP</edge>
+    <edge>KinkedTube --&gt; Press</edge>
+    <edge>Intubation --&gt; Press</edge>
+    <edge>VentTube --&gt; Press</edge>
+    <edge>StrokeVolume --&gt; CO</edge>
+    <edge>HR --&gt; CO</edge>
+    <edge>TPR --&gt; BP</edge>
+    <edge>CO --&gt; BP</edge>
+  </edges>
+</graph>

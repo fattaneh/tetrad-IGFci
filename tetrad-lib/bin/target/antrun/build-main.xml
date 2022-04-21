@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <copy file="../docs/manual/index.html" tofile="/Users/fattanehjabbari/CCD-Project/CS-BN/tetrad/tetrad-lib/target/classes/manual/index.html"/>
+</target>
+</project>

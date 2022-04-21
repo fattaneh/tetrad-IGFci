@@ -1,0 +1,57 @@
+Num runs = 1
+Num vars = 10
+Num edges = 10
+Num cases = 10000
+Sample prior = 1
+Structure prior = 1
+Depth = 1
+
+
+
+
+******************************** RUN 1 ********************************
+
+
+Wed May 08 13:49:57 EDT 2019
+Graph done
+Elapsed (simulating the data): 81 ms
+Time consructing BDeu score 4 ms
+Time for FGES constructor 20 ms
+Time for FGES search 185 ms
+
+           ---  o-o  o->  -->  <->  No Edge
+      ---    3    0    0    0    0        0
+      o-o    0    0    0    0    0        0
+      o->    0    0    0    0    0        0
+      <-o    0    0    0    0    0        0
+      -->    0    0    0    7    0        0
+      <--    0    0    0    0    0        0
+      <->    0    0    0    0    0        0
+  No Edge    0    0    0    0    0        *
+
+Ratio correct edges to estimated edges = 1.00
+
+APRE	AREC	OPRE	OREC
+100.00%	100.00%	100.00%	100.00%
+
+Elapsed: 185 ms
+
+Average
+           ---  o-o  o->  -->  <->  No Edge
+      ---  3.0  0.0  0.0  0.0  0.0      0.0
+      o-o  0.0  0.0  0.0  0.0  0.0      0.0
+      o->  0.0  0.0  0.0  0.0  0.0      0.0
+      <-o  0.0  0.0  0.0  0.0  0.0      0.0
+      -->  0.0  0.0  0.0  7.0  0.0      0.0
+      <--  0.0  0.0  0.0  0.0  0.0      0.0
+      <->  0.0  0.0  0.0  0.0  0.0      0.0
+  No Edge  0.0  0.0  0.0  0.0  0.0        *
+
+Ratio correct edges to estimated edges = 1.00
+
+APRE	AREC	OPRE	OREC
+100.00%	100.00%	100.00%	100.00%
+
+
+Average Elapsed Time = 185 ms
+
